@@ -7,7 +7,7 @@ import time
 import numpy as np
 
 # Load the dataset
-df = pd.read_excel(r'D:\CrazySoft\Model_Output_Screen\stock_prediction_results_20250721_062729.xlsx', parse_dates=['Datetime'])
+df = pd.read_excel(r'stock_prediction_results_20250721_062729.xlsx', parse_dates=['Datetime'])
 
 # Set page config for a modern, immersive look
 st.set_page_config(layout="wide", page_title="CrazySoft ML Model Outputs", initial_sidebar_state="expanded")
