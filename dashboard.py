@@ -7,7 +7,7 @@ import time
 import numpy as np
 
 # Load the dataset
-df = pd.read_excel(r'stock_prediction_results_20250721_062729.xlsx', parse_dates=['Datetime'])
+df = pd.read_excel(r'D:\CrazySoft\Model_Output_Screen\stock_prediction_results_20250721_062729.xlsx', parse_dates=['Datetime'])
 
 # Set page config for a modern, immersive look
 st.set_page_config(layout="wide", page_title="CrazySoft ML Model Outputs", initial_sidebar_state="expanded")
@@ -160,7 +160,7 @@ with col4:
         price_fig.add_trace(go.Scatter(x=filtered_df['Datetime'], y=filtered_df['Predicted_Open'], name='Predicted Open', line=dict(color='#1a73e8', width=2.5), mode='lines+markers'))
         price_fig.add_trace(go.Scatter(x=filtered_df['Datetime'], y=filtered_df['Actual_Open'], name='Actual Open', line=dict(color='#ffff00', width=2.5), mode='lines+markers'))
     price_fig.add_trace(go.Scatter(x=filtered_df['Datetime'], y=filtered_df['Predicted_Close'], name='Predicted Close', line=dict(color='#f44336', width=2.5), mode='lines+markers'))
-    price_fig.add_trace(go.Scatter(x=filtered_df['Datetime'], y=filtered_df['Actual_Close'], name='Actual Close', line=dict(color='#ffffff', width=2.5), mode='lines+markers'))
+    price_fig.add_trace(go.Scatter(x=filtered_df['Datetime'], y=filtered_df['Actual_Close'], name='Actual Close', line=dict(color='#000000', width=2.5), mode='lines+markers'))
     price_fig.add_trace(go.Scatter(x=filtered_df['Datetime'], y=filtered_df['Predicted_High'], name='Predicted High', line=dict(color='#4caf50', width=2.5), mode='lines+markers'))
     price_fig.add_trace(go.Scatter(x=filtered_df['Datetime'], y=filtered_df['Actual_High'], name='Actual High', line=dict(color='#f44336', width=2.5), mode='lines+markers'))
     price_fig.add_trace(go.Scatter(x=filtered_df['Datetime'], y=filtered_df['Predicted_Low'], name='Predicted Low', line=dict(color='#e91e63', width=2.5), mode='lines+markers'))
